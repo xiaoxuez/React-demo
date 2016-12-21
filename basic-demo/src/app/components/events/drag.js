@@ -17,7 +17,7 @@ export default class extends React.Component {
     if (type === 'test') {
       let dragged = this.state.dragged.concat();
       let uuid = BasicUtils.uuid(8, 16);
-      dragged.push(<TestModule key={uuid}/>);
+      dragged.push(<TestModule key={uuid} top={ev.clientY} left={ev.clientX}/>);
       this.setState({
         dragged: dragged,
       })
@@ -54,8 +54,9 @@ export default class extends React.Component {
 
 class TestModule extends React.Component {
   render() {
+    const {top, left} = this.props;
     return (
-      <div className='draggable-one' />
+      <div className='draggable-one' style={{position: 'absolute', top: top - 15, left: left -15}}/>
     )
   }
 }
