@@ -289,6 +289,9 @@ class TrackballControls extends THREE.EventDispatcher {
       lastPosition.copy(_this.object.position);
     };
 
+    this.setEnabled = (enabled) => {
+        _this.enabled = enabled;
+      }
     // listeners
 
     function keydown(event) {
