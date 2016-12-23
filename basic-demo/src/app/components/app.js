@@ -20,15 +20,30 @@ Dispatcher.register(function(payload) {
   }
 });
 
+import Header from './scroll_header';
 export default class extends React.Component {
   render() {
     return (
         <div className='app'>
-          <MainHeader/>
-          <div className='main-content container'>
+          <Header/>
+          <div style={{height: window.innerHeight, paddingTop: 60,}}>
             {this.props.children}
           </div>
         </div>
     );
+    // return (
+    //   <div className='app'>
+    //     <Header />
+    //     {this.gatherData()}
+    //   </div>
+    // )
+  }
+
+  gatherData() {
+    let gathers = [];
+    for (let i = 0; i < 100; i++) {
+      gathers.push(<div className='lines'> lines {i} {i} {i}  lines</div>)
+    }
+    return gathers;
   }
 }

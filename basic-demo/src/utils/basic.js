@@ -19,7 +19,7 @@ var uuid = function(len, radix) {
       for (i = 0; i < 36; i++) {
         if (!uuid[i]) {
           r = 0 | Math.random()*16;
-          uuid[i] = chars[(i == 19) ? (r & 0x3) | 0x8 : r];
+          uuid[i] = chars[(i === 19) ? (r & 0x3) | 0x8 : r];
         }
       }
     }
