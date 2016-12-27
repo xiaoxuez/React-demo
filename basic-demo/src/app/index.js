@@ -7,12 +7,15 @@ import Event from './components/event';
 import Girls from './components/girls';
 import Add from './components/add';
 import Drag from './components/events/drag';
+import CssPseudo from './components/events/css_pseudo';
+
 var appRouter = (
   <Router history={browserHistory}>
     <Route title="SurveyBuilder" path="/" component={App}>
       <IndexRoute component={All} />
       <Route path="event" component={Event}>
         <IndexRoute component={Drag} />
+        <Route path="css-pseudo" component={CssPseudo} />
       </Route>
       <Route path="girls" component={Girls} />
       <Route path="add" component={Add} />

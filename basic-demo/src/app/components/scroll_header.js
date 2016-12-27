@@ -33,7 +33,6 @@ class Header extends React.Component {
 
   handleScroll = (event) => {
     if (!this._pending) {
-      console.log(window.scrollY);
       var headerHeight = Math.min(800, Math.max(260, document.documentElement.clientHeight * 0.7));
       if (window.scrollY < headerHeight) {
         this._pending = true;

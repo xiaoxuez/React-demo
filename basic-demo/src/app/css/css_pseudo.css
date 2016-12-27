@@ -1,0 +1,70 @@
+.container {
+  /*display: -webkit-flex;
+  -webkit-align-items: center;
+  -webkit-flex-direction: column;
+  -webkit-justify-content: center;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;*/
+}
+
+.container h4 {
+  margin: 20px 0;
+  color: blue;
+}
+
+.container p {
+  margin: 0 40px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.input-example-1 {
+  display: flex;
+  display: -webkit-flex;
+  -webkit-flex-direction: row;
+  flex-direction: row;
+  width: 100%;
+  position: relative;
+  background-color: #efefef;
+}
+
+.input-example-1 input {
+  width: 200px;
+  height: 40px;
+}
+
+.input-example-1 > div {
+  position: absolute;
+  top: 0;
+  line-height: 40px;
+  left: 250px;
+}
+
+.input:focus ~ .send {
+  display: block;
+}
+
+ .input:focus ~ .cool {
+  display: none;
+}
+
+.send {
+  display: none;
+}
+
+.example-2 {
+  margin: 20px 0;
+
+}
+
+.example-2 ul {
+  padding: 10px 40px;
+  list-style: none;
+}
+
+.example-2 ul li:nth-last-child(n+4) ~ li,
+.example-2 ul li:nth-last-child(n+4):first-child{
+  color: red;
+}

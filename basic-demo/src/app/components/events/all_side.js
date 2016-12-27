@@ -6,6 +6,7 @@ export default class extends React.Component {
       <div className='all-side' style={{height: window.innerHeight - 44}}>
         <ul>
           <li><IndexLink to="/event">Drag</IndexLink></li>
+          <li><Link to="/event/css-pseudo">CssPseudo</Link></li>
         </ul>
       </div>
     )

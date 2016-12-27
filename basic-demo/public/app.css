@@ -11,7 +11,6 @@
 
 .all-side ul {
   list-style: none;
-  margin: 0, 10px;
 }
 
 .all-side {
@@ -21,8 +20,12 @@
   border-right-style: solid;
 }
 
+.all-side ul li {
+  margin: 10px 10px;
+}
+
 .event-content {
-  padding: 10px 10px 10px 90px;
+  padding: 10px 10px 10px 120px;
 }
 
 .clearfloat {
